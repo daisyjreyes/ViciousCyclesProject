@@ -1,0 +1,71 @@
+/*Daisy J. Reyes 11/4/20 */
+
+body { color: #FFFFFF; /*set text color to white*/
+	font: white; 
+	background-color: #8b8888; /*set background color to light blue*/
+	font-family: Calibri, sans-serif; /*set font to Calibri, or the
+	generic sans-serif font*/
+	}
+   #outer-wrapper { width: 90%; /*set width of id="outer-wrapper" to 90%*/
+	margin: 0 auto 0 auto; /*center content within id="outer-wrapper"*/
+	}
+	
+    nav, #content, footer { 
+	   background-color: #000000; /*set
+	background color to bright blue*/
+	padding: 10px; /*add 10px of padding on all four sides of the
+	wireframe containers*/
+   }
+   header {
+	   background-color: #000000;
+	   padding: 0 2% 2% 0;
+   }
+   
+   footer { font-size: 0.75em; /*reduce the font size in the footer*/
+	text-align: center; /*center the text in the footer*/
+	}
+
+	nav {
+        background-color: #8b8888;
+        font-size: 150%;
+	}
+	h1, h2, h3 { font-family: Verdana, sans-serif;
+		padding-top: 1%;}
+
+	li { 
+		list-style-type: none; 
+		display: inline;
+         }
+         
+    .clearfloat {clear: both;}
+
+    .cover-image-mansitting{
+        background-image: linear-gradient(0deg, rgb(216, 214, 214), transparent), url('images/mansitting.jpg') no-repeat center; 
+        background-size: 100% auto; 
+        color:#8b8888;
+        padding-top: 0px;
+        padding-bottom: -100px; 
+        text-align: center; 
+    }
+    .logo-center{
+        background: url('images/logo.jpg');
+        background-size: 120%;
+        background-repeat: no-repeat;
+        background-position: center; 
+        float: right;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 250px; 
+        height: 250px; 
+        box-shadow: 0px 0px 10px 15px rgba(0,0,0, 90);
+        border-radius: 50%;
+    
+    }
+   h1{
+       
+       font-size: 500%;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   }
+   #liproducts{
+       font-size: 300%;
+   }
