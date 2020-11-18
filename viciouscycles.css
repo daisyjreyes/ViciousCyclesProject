@@ -1,71 +1,379 @@
 /*Daisy J. Reyes 11/4/20 */
 
-body { color: #FFFFFF; /*set text color to white*/
-	font: white; 
-	background-color: #8b8888; /*set background color to light blue*/
+#page{
+    max-width: 100%; 
+    max-width: 2200px;
+    margin: 0 auto; 
+    position: relative;
+    
+}
+
+body { 
+    color: #FFFFFF; /*set text color to white*/
+	background-color: #141111; /*set background color*/
 	font-family: Calibri, sans-serif; /*set font to Calibri, or the
 	generic sans-serif font*/
-	}
-   #outer-wrapper { width: 90%; /*set width of id="outer-wrapper" to 90%*/
-	margin: 0 auto 0 auto; /*center content within id="outer-wrapper"*/
-	}
-	
-    nav, #content, footer { 
-	   background-color: #000000; /*set
-	background color to bright blue*/
-	padding: 10px; /*add 10px of padding on all four sides of the
-	wireframe containers*/
+    }
+
+header {
+    height: 460px;
+    background: url(../ViciousCycle/images/cover.jpeg) no-repeat center; position: relative; background-size: cover; 
    }
-   header {
-	   background-color: #000000;
-	   padding: 0 2% 2% 0;
-   }
+
+header a.logo {
+    z-index: 1;
+    position: absolute; 
+    display: block; width: 40%; height: 50%;
+    background: url(../ViciousCycle/images/VClogo.png) no-repeat 0 0; background-size: contain; 
+    top: 15px; left: 20px;
+    float: right;
+    }
+
+header a.logo span {display: none;}
+header div.hero { position: absolute; width: 42%; top: 60%; left: 55%;}
+header.div.hero h2 {line-height: 2em; margin: 0 0 30px 0; color: white; }
    
-   footer { font-size: 0.75em; /*reduce the font size in the footer*/
-	text-align: center; /*center the text in the footer*/
+/*Navigation */ 
+nav {
+    background-color: rgba(0,0,0,.65);
+    position: absolute;
+    top: 0px; left: 0px;
+    padding: 50px 0 0 0;
+    width: 100%; 
+}
+
+
+nav::after {content:''; display: block; clear: both;}
+
+nav ul { list-style: none; margin: 0; padding: 0; }
+
+nav ul li:hover {background-color: rgb(155, 146, 146);}
+
+nav ul li:hover > ul { display: block; }
+
+nav ul ul {position: absolute; top: 100%; background-color: #2b0306 ; display: none; }
+
+nav ul ul li { position: relative; }
+
+nav ul ul ul { left: 100%; top: 0px; }
+
+nav ul li a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px; 
+    width: 125px;
+    position: relative;
+}
+
+nav > ul { padding-left: 200px; }
+nav > ul > li {float: right; }
+
+nav > ul > li > a {width: auto; padding: 10px 20px 15px 20px;}
+
+nav ul li a:visited{color: #fff;}
+nav ul li a:hover{color: #6d0911; }
+
+footer { 
+    font-size: 0.75em; /*reduce the font size in the footer*/
+    text-align: center; /*center the text in the footer*/
 	}
 
-	nav {
-        background-color: #8b8888;
-        font-size: 150%;
-	}
-	h1, h2, h3 { font-family: Verdana, sans-serif;
-		padding-top: 1%;}
 
-	li { 
-		list-style-type: none; 
-		display: inline;
-         }
-         
-    .clearfloat {clear: both;}
-
-    .cover-image-mansitting{
-        background-image: linear-gradient(0deg, rgb(216, 214, 214), transparent), url('images/mansitting.jpg') no-repeat center; 
-        background-size: 100% auto; 
-        color:#8b8888;
-        padding-top: 0px;
-        padding-bottom: -100px; 
-        text-align: center; 
-    }
-    .logo-center{
-        background: url('images/logo.jpg');
-        background-size: 120%;
-        background-repeat: no-repeat;
-        background-position: center; 
-        float: right;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        width: 250px; 
-        height: 250px; 
-        box-shadow: 0px 0px 10px 15px rgba(0,0,0, 90);
-        border-radius: 50%;
     
-    }
-   h1{
-       
-       font-size: 500%;
-       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+h1, h2, h3 { 
+    font-family: Verdana, sans-serif;
+	padding-top: 1%;}
+
+h1{
+    font-size: 500%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    }
-   #liproducts{
-       font-size: 300%;
-   }
+
+
+/* anchor styles */
+a:visited{ color: #007eff; }
+a{ color: red; }
+
+a.btn{ font-size: 1.2em; text-decoration: none; color: white; border: 1px solid #fff; padding: 4px 15px;
+transition: background-color .5s; left: 80%;}
+
+a.btn:hover {background-color: rgba(255, 166, 0, 0.479);}
+
+
+
+   /* Social Media buttons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+/* Section - ALL */
+section {padding: 0 30px; }
+
+section::after {
+    content: ''; display: block; clear: both;
+}
+/*Section Main */
+section.products {
+    margin-top: 0px; 
+    margin-bottom: 30px; 
+    padding: 0;
+    /*background-color: rgba(128, 128, 128, 0.24);*/
+    /* background: linear-gradient( rgba(109, 88, 43, 0.418), #141111);
+    border-radius: 30px; */
+    background: url(../ViciousCycle/images/covercont.jpeg) no-repeat center top; position: relative; 
+    border-top: 5px dotted rgba(128, 128, 128, 0.603) ;
+}
+
+section.products aside{ width: 33%; float: left; text-align: center; }
+section.products .content { margin: 15px; background: no-repeat center top; background-size: 75px 75px; 
+padding-top: 85px; }
+
+section.products aside .content.handshake {background-image: url(../ViciousCycle/images/handshake.svg); }
+section.products aside .content.service {background-image: url(../ViciousCycle/images/service.svg); }
+section.products aside .content.payment {background-image: url(../ViciousCycle/images/payment.svg); }
+section.products aside .content.payment li{
+    list-style-type: none;
+    text-align: left;
+    float: center;
+    padding-left: 40px;
+}
+section.aboutus a.btn {
+    margin-left: 300px;
+}
+section.aboutus {
+    white-space: wrap;
+    background-color: rgba(0,0,0,.65);
+    margin: 0 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+    border-style: groove;
+    border-color: orange;
+    
+}
+section.aboutus article {
+    padding: 0 20px 0 300px;
+    background: url(../ViciousCycle/images/aboutus.jpeg) no-repeat 0 5px; min-height: 220px;  background-size: contain; float: left;
+}
+ section.tradeshows {
+     background-color: rgba(255, 166, 0, 0.342);
+     position: relative; 
+     border-radius: 50px;
+     margin: 40px;
+ }
+
+ section.tradeshows aside { 
+     width: 33%; float: left; text-align: center;
+
+ }
+ section.tradeshows aside .content {
+     padding: 30px;
+ }
+
+
+ section.tradeshows blockquote {
+    margin: auto;
+    width: 33%;
+    position: absolute;
+    top: 0; right: 0;
+    color: orange;
+    text-shadow: 2px 2px black;
+
+}
+
+section.tradeshows blockquote p { 
+    margin: 30px 30px 20px 50px;
+    font-size: .9em; 
+    margin-top: 0;
+    padding-right: 10px; 
+    line-height: 2.3em;
+    position: relative;
+
+}
+ 
+
+section.tradeshows blockquote a.btn{ 
+    font-size: 1.2em; 
+    text-decoration: none; 
+    color: white; 
+    border: 1px double orange; 
+    padding: 3px 9px;
+    margin: 5px;
+    transition: background-color .5s; 
+    /* background: url(../ViciousCycle/images/ticket.svg) center; */
+    text-shadow: 3px 3px black;
+    float: center;
+}
+
+section.tradeshows blockquote img{
+    float: left;
+}
+
+section.imagetrade{
+    border-top: 5px dotted gray; 
+    border-bottom: 5px dotted gray; 
+    padding-bottom: 30px;
+}
+section.imagetrade aside {
+    width: 33%; float: left;
+    margin-left: 150px;
+}
+
+section.imagetrade aside h3{
+    text-align: center;
+    padding-right: 80px;
+}
+
+section.imagetrade img{
+    border: solid purple; 
+    border-radius: 50%;
+    width: 400px;
+    max-width: 100%;
+    height: auto;    
+    align-items: center;
+}
+
+section.imagetrade aside .augimg img{
+    border-style:  6px solid yellow;
+
+}
+
+
+section.imagetrade .imgtrade img:hover{
+    transform: scaleX(-1);
+}
+
+
+select{
+    background-color: #141111;
+    color: #fff;
+}
+
+.order{
+    border: solid green;
+}
+
+section.contactinfo {
+    padding: 5px;
+    text-align: center;
+    color: orange;
+    height: 420px;
+    text-shadow:1px 1px  white;
+}
+
+section.contactinfo {
+    background: url(../ViciousCycle/images/ride.gif); background-size: cover; opacity: .5;
+    /* no-repeat center top; position: relative; */
+}
+
+
+section.contactinfo aside{
+    width: 33%; 
+    float: left;
+    text-align: center;
+    z-index: 1;
+}
+
+section.contactinfo aside h3{
+    padding: 4px;
+}
+
+
+section.contactinfo aside #hours{
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+section.contactinfo aside #address{
+    text-shadow: 2px 2px black;
+    color: white;
+}
+
+section.contactinfo aside .phone{
+    padding: 0;
+
+}
+
+section.contactinfo aside .phone h3 {
+    padding: 1px;
+
+}
+section.contactinfo aside .phone #aa{
+    padding-top: 0;
+    margin-top: 1px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+section.contactinfo aside .phone a{
+    text-shadow: none;
+}
+
+section.contactinfo aside .HOP{
+    font-size: 2em;
+    margin: 20px;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.438), rgba(128, 128, 128, 0.616), rgba(255, 255, 255, 0.568));
+}
+
+section.contactinfo aside .address {
+    font-size: 2em;
+    
+    margin: 20px;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.438), rgba(128, 128, 128, 0.616), rgba(255, 255, 255, 0.568));
+}
+
+section.contactinfo aside .phone{
+    font-size: 2em;
+    
+    margin: 20px;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.438), rgba(128, 128, 128, 0.616), rgba(255, 255, 255, 0.568));
+}
+
+/*section.gif .bikegif{
+    border: 6px solid purple;
+    width: 100%;
+    height: 460px;
+    background: url(../ViciousCycle/images/ride.gif) no-repeat 0 0; background-size: cover; 
+
+}*/
+section.socialmedia {
+    border: solid green;
+    width: 100%; float: left; text-align: center;
+    margin: 20px;
+}
+
+section.form {
+    border: 3px solid white;
+    margin: 30px;
+    padding: 0 0 350px 0;
+}
+
+section.form .submit{
+    border-bottom: 2px solid white;
+    margin: 30px 1000px 30px 30px;
+    padding: 20px;
+}
